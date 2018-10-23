@@ -1,15 +1,18 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+li {
+  list-style: none;
+}
 
 body {
-  min-width: 1024px;
+  mixin-width: 1024px;
   margin:0;
 }
 
 header {
   background-color: #008B8B;
-  height:75px;
+  height:85px;
   width: auto;
   color: white;
 }
@@ -23,8 +26,101 @@ header {
 }
 
 .menu-bars {
-  float: right;
+  float:right;
 }
+
+// 検索フォーム↓
+
+#search-form {
+  position: relative;
+  max-width: 350px;
+  margin: 10px;
+}
+
+#search-bar {
+  height: 50px;
+  padding:0 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 25px;
+  background-color: #eee;
+  border: none;
+  display: none;
+}
+
+#btn-search {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: black;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  display: none;
+}
+
+#btn-bar {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  background: black;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  margin:5px 10px 0 10px;
+}
+
+#btn-login {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  background: black;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  margin:60px 10px 0 10px;
+  display: none;
+}
+
+#btn-setting {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  background: black;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  margin:5px 10px 0 10px;
+  display: none;
+}
+
+
+.fas {
+  font-size: 20px;
+  position: absolute;
+  left: 30%;
+  top: 30%;
+}
+
+.search-form button :hover {
+  color: #888;
+}
+
+#btn-login :hover {
+  color: #888;
+}
+
+#btn-bar :hover {
+  color: #888;
+}
+
+#btn-setting :hover {
+  color: #888;
+}
+// 検索フォーム↑
 
 .menu-bar {
   float: left;

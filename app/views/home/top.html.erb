@@ -3,17 +3,84 @@
     <head>
       <meta charset="utf-8">
       <link rel="stylesheet" href="/home.scss">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     </head>
     <body>
       <header>
+
         <div class="header-logo">LOGO</div>
+
         <div class="menu-bars">
-          <ul>
-            <li class="menu-bar">検索</li>
-            <li class="menu-bar">ログイン</li>
-            <li class="menu-bar">設定</li>
-          </ul>
+
+          <ol>
+
+            <li>
+
+            <button id="btn-bar" type="">
+              <i class="fas fa-bars"></i>
+            </button>
+
+            </li>
+
+            <script>
+              $('#btn-bar').on('click',function(){
+                $("#btn-search").slideToggle();
+                $("#btn-login").slideToggle();
+                $("#btn-setting").slideToggle();
+              });
+
+
+            </script>
+
+
+            <li>
+
+              <form  id="search-form" action="" method="get" autocomplete="off">
+                <input id="search-bar" type="text" name="s" placeholder="サイト内を検索">
+                <button id="btn-search" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </form>
+
+              <script>
+                $('#btn-search').hover(
+                  function(){
+                    $('#search-bar').css('display','block');
+                  },
+                  function(){
+                    $('#search-bar').css('display','none');
+                });
+                $('#search-bar').hover(
+                  function(){
+                    $('#search-bar').css('display','block');
+                  },
+                  function(){
+                    $('#search-bar').css('display','none');
+                });
+              </script>
+
+            </li>
+
+            <li>
+
+            <button id="btn-login" type="" >
+              <i class="fas fa-sign-in-alt"></i>
+            </button>
+
+            </li>
+
+            <li>
+
+            <button id="btn-setting" type="" >
+              <i class="fas fa-cog"></i>
+            </button>
+
+            </li>
+
+          </ol>
+
         </div>
+
       </header>
       <main>
 
@@ -31,7 +98,7 @@
         <div class="article-wrapper">
 
           <div class="container">
-            
+
             <div class="article-image">
               <%= image_tag("article-image-1.jpg", :size => "300x300") %>
             </div>
