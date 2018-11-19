@@ -1,0 +1,15 @@
+<head>
+  <link rel="stylesheet" href="/users.scss">
+</head>
+
+<div class="signup-form">
+  <%= form_tag("/users/create",{method: "post"}) do %>
+  <p>ユーザー名</p>
+  <input type="text" name="name">
+  <p>メールアドレス</p>
+  <input type="text" name="email">
+  <p>パスワード</p>
+  <input type="password" name="password">
+  <input class="submit" type="submit" value="登録">
+  <% end %>
+</div>

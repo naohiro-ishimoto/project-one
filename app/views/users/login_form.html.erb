@@ -1,0 +1,21 @@
+<head>
+  <link rel="stylesheet" href="/users.scss">
+</head>
+
+<%= form_tag("login") do %>
+<div class="login_form">
+  <p>メールアドレス</p>
+  <input type="text" name="email" value="">
+  <p>パスワード</p>
+  <input type="password" name="password" value="">
+  <input class="submit" type="submit" value="ログイン">
+</div>
+<% end %>
+
+<div class="signup-container">
+  <%= link_to(
+  "新規登録",
+  "/signup",
+  :class => "signup"
+  )%>
+</div>

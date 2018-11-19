@@ -1,0 +1,15 @@
+current directory: /home/vagrant/asap_app/project-one/vendor/bundler/gems/websocket-driver-0.6.5/ext/websocket-driver
+/home/vagrant/.rbenv/versions/2.4.2/bin/ruby -r ./siteconf20181028-5209-4jq3ds.rb extconf.rb
+creating Makefile
+
+current directory: /home/vagrant/asap_app/project-one/vendor/bundler/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/vagrant/asap_app/project-one/vendor/bundler/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/vagrant/asap_app/project-one/vendor/bundler/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20181028-5209-1l27qff

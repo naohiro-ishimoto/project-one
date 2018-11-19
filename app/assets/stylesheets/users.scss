@@ -1,0 +1,59 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.login_form , .signup-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.login_form input, .signup-form input {
+  color: #008B8B;
+  border: 1px solid #008B8B;
+  border-radius: 5px;
+  background: white;
+}
+
+.login_form p, .signup-form p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.submit {
+  width: 80px;
+  height: 30px;
+  box-shadow: 1px 1px #008B8B;
+  margin-top: 10px;
+}
+
+.submit:hover {
+  color: #ff6040;
+}
+
+.signup-container  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup {
+  text-decoration: none;
+  color: #008B8B;
+  border: 1px solid #008B8B;
+  border-radius: 5px;
+  background: white;
+  width: 80px;
+  height: 30px;
+  box-shadow: 1px 1px #008B8B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.signup:hover {
+    color: #ff6040;
+}

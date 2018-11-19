@@ -1,7 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsApp</title>
+<!-- ＃文字コード -->
+  <meta charset="utf-8">
+<!-- ＃デバイスのサイズに画面を合わせる -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<!-- ＃サイトの説明 -->
+  <!-- <meta name="description" content="・・・"> -->
+  <!-- <meta name="format-detection" content="telephone=no,address=no,email=no"> -->
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+  <!-- <meta name="robots" content="noindex,nofollow"> -->
+<!-- ＃タブの中でのコード -->
+  <title>BALISH</title>
+<!-- ＃アイコン画像 -->
+  <!-- <link rel="shortcut icon" href="・・・" > -->
+<!-- ＃スタイルシートの読み込み -->
+  <!-- <link rel="stylesheet" href="application.css"> -->
+<!-- ＃AwesomeFontの読み込み -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +25,135 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="inner">
+      <header>
+
+        <div class="header-container">
+
+          <div class="header-logo">
+            <a href="/">BALISH</a>
+          </div>
+
+          <div class="menu-bars">
+            <ul>
+              <li>
+                <button id="btn-bar" class="top-btn" type="">
+                  <i class="fas fa-bars"></i>
+                </button>
+              </li>
+              <script>
+                $('#btn-bar').on('click',function(){
+                  $("#btn-search").slideToggle();
+                  $("#btn-login").slideToggle();
+                  $("#btn-setting").slideToggle();
+                });
+              </script>
+              <li>
+                <form  id="search-form" action="" method="get" autocomplete="off">
+                  <input id="search-bar" type="text" name="s" placeholder="サイト内を検索">
+                  <button id="btn-search" class="top-btn" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </form>
+                <script>
+                  $('#btn-search').hover(
+                    function(){
+                      $('#search-bar').css('display','block');
+                    },
+                    function(){
+                      $('#search-bar').css('display','none');
+                    });
+                    $('#search-bar').hover(
+                      function(){
+                        $('#search-bar').css('display','block');
+                    },
+                    function(){
+                      $('#search-bar').css('display','none');
+                    });
+                </script>
+              </li>
+              <li>
+                  <% if @current_user %>
+                    <%= link_to("/logout",{method: "post"}) do %>
+                      <button id="btn-login" class="top-btn" type="" >
+                      <i class="fas fa-sign-out-alt"></i>
+                      </button>
+                    <% end %>
+                  <% else %>
+                    <%= link_to("/login") do %>
+                      <button id="btn-login" class="top-btn" type="" >
+                      <i class="fas fa-sign-in-alt"></i>
+                      </button>
+                    <% end %>
+                  <% end %>
+              </li>
+              <li>
+                <button id="btn-setting" class="top-btn" type="" >
+                  <i class="fas fa-cog"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <main>
+          <div class="top-wrapper">
+            <div class="s-frame">
+              <input class="s-txt" name="" type="text" placeholder="キーワードで検索">
+              <a class="s-btn" href="#">
+                <i class="fas fa-search"></i>
+              </a>
+            </div>
+          </div>
+
+          <nav>
+            <ul class="six-nav">
+              <%= link_to("#",:style => "text-decoration:none") do %>
+              <li>
+                <!-- <i class="fas fa-book"></i><br> -->
+                <p>基本情報</p>
+              </li>
+              <% end %>
+              <%= link_to("#",:style => "text-decoration:none") do %>
+              <li>
+                <!-- <i class="fas fa-road"></i><br> -->
+                <p>交通</p>
+              </li>
+              <% end %>
+              <%= link_to("#",:style => "text-decoration:none") do %>
+              <li>
+                <!-- <i class="fas fa-map-marker-alt"></i><br> -->
+                <p>エリア</p>
+              </li>
+              <% end %>
+              <%= link_to("#",:style => "text-decoration:none") do %>
+              <li>
+                <!-- <i class="fas fa-utensils"></i><br> -->
+                <p>グルメ</p>
+              </li>
+              <% end %>
+              <%= link_to("#",:style => "text-decoration:none") do %>
+              <li>
+                <!-- <i class="fas fa-shopping-cart"></i><br> -->
+                <p>ショッピング</p>
+              </li>
+              <% end %>
+              <%= link_to("#",:style => "text-decoration:none") do %>
+              <li>
+                <!-- <i class="fab fa-hubspot"></i><br> -->
+                <p>観光スポット</p>
+              </li>
+              <% end %>
+            </ul>
+          </nav>
+
+        <%= yield %>
+      </main>
+      <footer>
+        <div class="copyright">
+          <p>© 2018 NaohiroIshimoto</p>
+        </div>
+      </footer>
   </body>
 </html>

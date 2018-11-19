@@ -1,0 +1,31 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.new-post {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 15px;
+}
+
+.new-post input,textarea {
+  color: #008B8B;
+  border: 1px solid #008B8B;
+  border-radius: 5px;
+  background: white;
+}
+
+.new-post p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.submit {
+  width: 80px;
+  height: 30px;
+  box-shadow: 1px 1px #008B8B;
+}
+
+.submit:hover {
+  color: #ff6040;
+}

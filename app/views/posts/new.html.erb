@@ -1,0 +1,16 @@
+<head>
+  <link rel="stylesheet" href="/posts.scss">
+</head>
+
+<div class="new-post">
+
+  <%= form_tag("/posts/create") do %>
+  <p>タイトル</p>
+  <input type="text" name="title" >
+  <p>内容</p>
+  <textarea name="content" rows="8" cols="80"></textarea>
+  <br>
+  <input class="submit" type="submit"  value="投稿">
+  <% end %>
+
+</div>
